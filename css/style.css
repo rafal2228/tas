@@ -1,0 +1,77 @@
+/* backgorunds */
+.body {
+    font-family: 'Lato', sans-serif;
+}
+.onas {
+    background:  no-repeat url("../img/bck_img1.jpg");
+    background-size: cover;
+}
+
+/* menu */
+
+.menu-bg {
+    background-color: #f9f9f9;
+}
+
+.menu-text-light {
+    font-family: 'Lato', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .menu-bar-contact {
+        height: 50px;
+        padding-top: 15px;
+        padding-right: 20px;
+    }
+    .menu-button-area {
+        padding-right: 100px;
+    }
+    .menu-logo {
+        background-image: url('../img/tas_logo.png');
+        background-size: cover;
+        width: 189px;
+        height: 96px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-nav>li>a {
+        text-align: center;
+    }
+    .menu-logo {
+        background-image: url('../img/tas_logo_min.png');
+        background-size: cover;
+        width: 107px;
+        height: 50px;
+    }
+}
+ul.navbar-nav>li>a {
+    background-color: #f9f9f9;
+    color: #141823;
+}
+ul.navbar-nav>li>a:focus {
+    background-color: #bf1a1a !important;
+    color: #f9f9f9 !important;
+}
+ul.navbar-nav>li>a:hover {
+    background-color: #bf1a1a !important;
+    color: #f9f9f9 !important;
+}
+
+/* View conf */
+@media (max-width: 768px) {
+    .container-fluid {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 768px) {
+    .container-fluid {
+        margin-top: 100px;
+    }
+}
+.view {
+    height: 650px;
+}
+
+.right {
+    float: right;
+}
