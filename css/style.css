@@ -1,10 +1,6 @@
-/* backgorunds */
+/* main */
 .body {
     font-family: 'Lato', sans-serif;
-}
-.onas {
-    background:  no-repeat url("../img/bck_img1.jpg");
-    background-size: cover;
 }
 
 /* menu */
@@ -12,20 +8,18 @@
 .menu-bg {
     background-color: #f9f9f9;
 }
-
-.menu-text-light {
-    font-family: 'Lato', sans-serif;
+@media (min-width: 992px) {
+    .menu-button-area {
+        padding-right: 100px;
+    }
 }
-
 @media (min-width: 768px) {
     .menu-bar-contact {
         height: 50px;
         padding-top: 15px;
         padding-right: 20px;
     }
-    .menu-button-area {
-        padding-right: 100px;
-    }
+
     .menu-logo {
         background-image: url('../img/tas_logo.png');
         background-size: cover;
@@ -33,7 +27,7 @@
         height: 96px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-nav>li>a {
         text-align: center;
     }
@@ -47,10 +41,15 @@
 ul.navbar-nav>li>a {
     background-color: #f9f9f9;
     color: #141823;
+    font-size: 20px;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 ul.navbar-nav>li>a:focus {
-    background-color: #bf1a1a !important;
-    color: #f9f9f9 !important;
+    background-color: #f9f9f9 !important;
+    color: #141823 !important;
 }
 ul.navbar-nav>li>a:hover {
     background-color: #bf1a1a !important;
@@ -58,20 +57,122 @@ ul.navbar-nav>li>a:hover {
 }
 
 /* View conf */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container-fluid {
         margin-top: 50px;
+    }
+    .onas > .view {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .onas > .view > h1 {
+        font-size: 35px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    }
+    .onas > .view > h2 {
+        margin-top: 75px;
+        font-size: 25px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
     }
 }
 @media (min-width: 768px) {
     .container-fluid {
         margin-top: 100px;
     }
-}
-.view {
-    height: 650px;
+    .onas > .view {
+        padding-bottom: 150px;
+        padding-top: 100px;
+    }
+    .onas > .view > h1 {
+        font-size: 58px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35);
+    }
+    .onas > .view > h2 {
+        margin-top: 150px;
+        font-size: 33px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35);
+    }
 }
 
+.onas {
+    background:  no-repeat url("../img/bck_img1.jpg");
+    background-size: cover;
+    border-bottom: solid 1px #c9c9c9;
+    border-top: solid 1px #c9c9c9;
+}
+.onas>.view {
+    text-align: center;
+}
+
+.oferta {
+    background-color: #ececea;
+}
+
+.oferta-window {
+     text-align: center;
+     border-radius: 0px 0px 10px 10px;
+     background-color: #f9f9f9;
+     margin-top: 30px;
+     margin-bottom: 10px;
+ }
+.oferta-window>.oferta-title {
+    background-color: #bf1a1a;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    font-size: 25px;
+    color: #f9f9f9;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.2);
+}
+.oferta-image {
+    height: 120px;
+    padding-top: 15px;
+}
+.oferta-text {
+    font-size: 18px;
+    color: #4d4f53;
+    padding: 15px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 8px;
+    color: #141823;
+}
+.heading-line {
+    width: 280px;
+    height: 1px;
+    background-color: #141823;
+}
+/* helper */
+.red {
+    color: #bf1a1a;
+}
 .right {
     float: right;
+}
+
+.left {
+    float: right;
+}
+.center {
+    margin: 0 auto;
+    float: none;
+    max-width: 1170px;
+}
+
+.lato-light {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+.lato {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
