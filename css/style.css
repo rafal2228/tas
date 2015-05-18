@@ -19,7 +19,9 @@
         padding-top: 15px;
         padding-right: 20px;
     }
-
+    .menu-bar-contact>.lato-light>a>img {
+        margin-left: 15px;
+    }
     .menu-logo {
         background-image: url('../img/tas_logo.png');
         background-size: cover;
@@ -140,7 +142,7 @@ ul.navbar-nav>li>a:hover {
     color: #4d4f53;
     padding: 15px;
     text-align: center;
-    line-height: 180%;
+    line-height: 140%;
 }
 .oferta-text>ul {
     text-align: left;
@@ -265,6 +267,25 @@ ul.navbar-nav>li>a:hover {
     }
 }
 
+.kontakt {
+    background-color: #f9f9f9;
+}
+.kontakt-icon {
+    text-align: center;
+    padding-top: 40px;
+}
+.kontakt-text {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 33px;
+    line-height: 120%;
+}
+.kontakt-text>span {
+    font-size: 25px;
+}
+.kontakt-hours {
+    padding-bottom: 20px;
+}
 /* helper */
 .red {
     color: #bf1a1a;
