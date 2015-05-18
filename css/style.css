@@ -95,7 +95,7 @@ ul.navbar-nav>li>a:hover {
 }
 
 .onas {
-    background:  no-repeat url("../img/bck_img1.jpg");
+    background:  no-repeat url("../img/onas_bg.jpg");
     background-size: cover;
     border-bottom: solid 1px #c9c9c9;
     border-top: solid 1px #c9c9c9;
@@ -106,6 +106,7 @@ ul.navbar-nav>li>a:hover {
 
 .oferta {
     background-color: #ececea;
+    padding-bottom: 20px;
 }
 
 .oferta-window {
@@ -138,8 +139,13 @@ ul.navbar-nav>li>a:hover {
     font-size: 18px;
     color: #4d4f53;
     padding: 15px;
+    text-align: center;
+    line-height: 180%;
 }
-
+.oferta-text>ul {
+    text-align: left;
+    list-style: disc inside;
+}
 .heading {
     text-align: center;
     font-size: 33px;
@@ -151,6 +157,114 @@ ul.navbar-nav>li>a:hover {
     height: 1px;
     background-color: #141823;
 }
+.heading-white {
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 8px;
+    color: #f9f9f9;
+}
+.heading-line-white {
+    width: 280px;
+    height: 1px;
+    background-color: #f9f9f9;
+}
+.szkolenia {
+    background: #313131 url("../img/szkolenia_bg.png");
+}
+
+.szkolenia-galeria {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.szkolenia-text {
+    color: #f9f9f9;
+    font-size: 23px;
+    padding-top: 30px;
+}
+.szkolenia-paragraph>ul {
+    padding: 0;
+    list-style: disc inside;
+    line-height: 140% !important;
+    padding-bottom: 10px;
+}
+.szkolenia-paragraph>span {
+    line-height: 100% !important;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.sklep {
+    background: no-repeat url("../img/sprzedaz_bg.jpg");
+    background-size: cover;
+    text-align: center;
+    color: #f9f9f9;
+}
+@media (max-width: 767px) {
+    .sklep-view {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .sklep-view > h1 {
+        font-size: 25px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    }
+    .sklep-button {
+        background-color: rgba(191, 27, 27, 0.5);
+        margin: 75px 0 0 0;
+        padding: 10px 40px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        border: none;
+        border-radius: 0px;
+        font-size: 25px;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+    }
+    .sklep-button:hover{
+        background-color: rgba(191, 27, 27, 0.9);
+        border: none;
+    }
+    .sklep-button:focus {
+        border: none;
+    }
+}
+@media (min-width: 768px) {
+    .sklep-view {
+        padding-bottom: 150px;
+        padding-top: 100px;
+    }
+    .sklep-view > h1 {
+        font-size: 33px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35);
+    }
+    .sklep-button {
+        background-color: rgba(191, 27, 27, 0.5);
+        margin: 120px 0 0 0;
+        padding: 10px 40px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        border: none;
+        border-radius: 0px;
+        font-size: 33px;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+    }
+    .sklep-button:hover{
+        background-color: rgba(191, 27, 27, 0.9);
+        border: none;
+    }
+    .sklep-button:focus {
+        border: none;
+    }
+}
+
 /* helper */
 .red {
     color: #bf1a1a;
