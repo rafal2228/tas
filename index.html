@@ -3,6 +3,18 @@
 <head lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#f9f9f9">
+    <meta name="theme-color" content="#ffffff">
     <title>TAS Piła - Wózki Widłowe</title>
 
     <!-- CSS -->
@@ -18,6 +30,27 @@
     <script type="application/javascript" src="js/app.js"></script>
 </head>
 <body>
+<!-- Modal Map -->
+<div class="modal fade" id="mapModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Wprowadź miejsce początkowe:</h4>
+            </div>
+            <div class="modal-body">
+                <p>Tutaj będzie mapa :D</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
     <nav class="navbar navbar-fixed-top navbar-default menu-bg" id="MenuNavBar">
         <div class="container">
             <div class="row">
@@ -28,7 +61,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand menu-logo" href="#"></a>
+                        <a class="navbar-brand menu-logo" href="#" data-scroll-nav='0'></a>
                     </div>
                 </div>
                 <div class="col-sm-9 hidden-xs">
@@ -51,11 +84,11 @@
         </div>
     </nav>
 <div class="container-fluid">
-    <div id="wayOnas" data-scroll-index='0' class="row">
-        <div class="col-md-12 col-xs-12 onas">
+    <div id="wayOnas" data-scroll-index='0' class="row onas">
+        <div class="col-md-12 col-xs-12">
                 <div class="view">
-                    <h1 class="lato-light">Twoja firma, nasze <span class="red">wózki</span>.<br />Twoje <span class="red">wózki</span>, nasz serwis.</h1>
-                    <h2 class="lato-light">Istniejemy na rynku od 27 lat, do każdego klienta podchodzimy<br/>indywidualnie, świadczymy usługi najwyższej jakości.</h2>
+                    <h1 class="lato-light fadeInDown trigger">Twoja firma, nasze <span class="red">wózki</span>.<br />Twoje <span class="red">wózki</span>, nasz serwis.</h1>
+                    <h2 class="lato-light fadeInUp trigger">Istniejemy na rynku od 27 lat, do każdego klienta podchodzimy<br/>indywidualnie, świadczymy usługi najwyższej jakości.</h2>
                 </div>
         </div>
     </div>
@@ -68,7 +101,7 @@
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <div class="oferta-window">
+                <div class="oferta-window fadeInUp trigger">
                     <div class="oferta-title lato-light">SERWIS</div>
                     <div class="oferta-image"><img src="img/serwis_icon.png" alt="SERWIS" /></div>
                     <div class="oferta-text lato-light">
@@ -79,7 +112,7 @@
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <div class="oferta-window">
+                <div class="oferta-window fadeInUp trigger">
                     <div class="oferta-title lato-light">SPRZEDAŻ</div>
                     <div class="oferta-image"><img src="img/sprzedaz_icon.png" alt="SPRZEDAŻ" /></div>
                     <div class="oferta-text lato-light">
@@ -96,7 +129,7 @@
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <div class="oferta-window">
+                <div class="oferta-window fadeInUp trigger">
                     <div class="oferta-title lato-light">DOZÓR</div>
                     <div class="oferta-image"><img src="img/dozor_icon.png" alt="DOZÓR" /></div>
                     <div class="oferta-text lato-light">
@@ -117,7 +150,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="szkolenia-text lato-light">
+                <div class="szkolenia-text lato-light fadeIn trigger">
                     <div class="col-sm-6 col-md-12 szkolenia-paragraph">
                         <span>Rodzaj prowadzonych przez nas szkoleń:</span>
                         <ul class="red">
@@ -151,15 +184,15 @@
                         <div class="carousel-inner" role="listbox">
 
                             <div class="item active">
-                                <img src="img/sala_1.jpg" alt="Sala" width="100%" height="75%">
+                                <img src="img/sala_1.jpg" alt="Sala">
                             </div>
 
                             <div class="item">
-                                <img src="img/sala_2.jpg" alt="Sala" width="100%" height="75%">
+                                <img src="img/sala_2.jpg" alt="Sala">
                             </div>
 
                             <div class="item">
-                                <img src="img/sala_3.jpg" alt="Sala" width="100%" height="75%">
+                                <img src="img/sala_3.jpg" alt="Sala">
                             </div>
 
                         </div>
@@ -201,8 +234,8 @@
                     <div class="heading-line center"></div>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-12">
-                <div class="kontakt-icon"><img src="img/phone_icon.png" /></div>
+            <div class="col-sm-4 col-xs-12 fadeIn trigger">
+                <div class="kontakt-icon"><img src="img/phone_icon.png" alt="PHONE"></div>
                 <div class="kontakt-text lato-light">
                     <div class="kontakt-hours">
                         godziny otwacia:<br />
@@ -213,9 +246,9 @@
                     taspila@poczta.fm
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-12">
-                <div class="kontakt-icon"><img src="img/mail_icon.png" /></div>
-                <div class="kontakt-text lato-light">
+            <div class="col-sm-4 col-xs-12 fadeIn trigger">
+                <div class="kontakt-icon kontakt-border-horizontal"><img src="img/mail_icon.png" alt="MAIL"></div>
+                <div class="kontakt-text lato-light kontakt-border-vertical">
                     Z.U.H TAS<br />
                     Krzysztof Adamczyk<br />
                     ul. Krzywa 15-17<br />
@@ -223,10 +256,10 @@
                     NIP: 764-000-44-47<br />
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-12">
-                <div class="kontakt-icon"><img src="img/pin_icon.png" /></div>
+            <div class="col-sm-4 col-xs-12 fadeIn trigger">
+                <div class="kontakt-icon kontakt-border-horizontal"><img src="img/pin_icon.png" alt="PIN"></div>
                 <div class="kontakt-text lato-light">
-                    <img src="img/mapa.jpg" alt="MAPA" /><br />
+                    <div class="kontakt-map"><button data-toggle="modal" data-target="#mapModal"></button></div>
                     <span>Pokaż wskazówki dojazdu</span>
                 </div>
             </div>
