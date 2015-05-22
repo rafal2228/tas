@@ -288,6 +288,7 @@ ul.navbar-nav>li>a:hover {
 }
 .kontakt-text>span {
     font-size: 25px;
+    cursor: pointer;
 }
 .kontakt-hours {
     padding-bottom: 20px;
@@ -317,7 +318,9 @@ ul.navbar-nav>li>a:hover {
         border-right: 1px solid #151923;
     }
 }
-
+.modal-map {
+    min-height: 50vh;
+}
 /* helper */
 .red {
     color: #bf1a1a;
@@ -345,4 +348,7 @@ ul.navbar-nav>li>a:hover {
 }
 .trigger {
     display: none;
+}
+.pac-container {
+    z-index: 10000;
 }

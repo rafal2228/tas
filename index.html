@@ -25,6 +25,7 @@
     <!-- JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/scrollIt.min.js"></script>
     <script type="application/javascript" src="js/app.js"></script>
@@ -32,16 +33,26 @@
 <body>
 <!-- Modal Map -->
 <div class="modal fade" id="mapModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Wprowadź miejsce początkowe:</h4>
+                <h6 class="modal-title">Wprowadź miejsce początkowe:</h6>
+                <form id="mapDirectionsForm">
+                    <input type="text" placeholder="Skąd jedziemy?" id="mapDirectionsStart">
+                    <input type="submit" class="btn btn-default" value="Pokaż">
+                </form>
             </div>
             <div class="modal-body">
-                <p>Tutaj będzie mapa :D</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="modal-map" id="mapContent">
+
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
@@ -51,7 +62,7 @@
     </div>
 </div>
 
-    <nav class="navbar navbar-fixed-top navbar-default menu-bg" id="MenuNavBar">
+<nav class="navbar navbar-fixed-top navbar-default menu-bg" id="MenuNavBar">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 col-xs-12">
@@ -82,7 +93,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+</nav>
 <div class="container-fluid">
     <div id="wayOnas" data-scroll-index='0' class="row onas">
         <div class="col-md-12 col-xs-12">
@@ -260,7 +271,7 @@
                 <div class="kontakt-icon kontakt-border-horizontal"><img src="img/pin_icon.png" alt="PIN"></div>
                 <div class="kontakt-text lato-light">
                     <div class="kontakt-map"><button data-toggle="modal" data-target="#mapModal"></button></div>
-                    <span>Pokaż wskazówki dojazdu</span>
+                    <span data-toggle="modal" data-target="#mapModal">Pokaż wskazówki dojazdu</span>
                 </div>
             </div>
         </div>
