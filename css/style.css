@@ -231,13 +231,15 @@ ul.navbar-nav>li>a:hover {
         -o-transition: all .2s ease-in;
         -webkit-transition: all .2s ease-in;
         transition: all .2s ease-in;
+        outline: none !important;
     }
     .sklep-button:hover{
         background-color: rgba(191, 27, 27, 0.9);
         border: none;
+        outline: none !important;
     }
-    .sklep-button:focus {
-        border: none;
+    .sklep-button:focus{
+        outline: none !important;
     }
 }
 @media (min-width: 768px) {
@@ -263,13 +265,15 @@ ul.navbar-nav>li>a:hover {
         -o-transition: all .2s ease-in;
         -webkit-transition: all .2s ease-in;
         transition: all .2s ease-in;
+        outline: none !important;
     }
-    .sklep-button:hover{
+    .sklep-button:hover {
         background-color: rgba(191, 27, 27, 0.9);
         border: none;
+        outline: none !important;
     }
-    .sklep-button:focus {
-        border: none;
+    .sklep-button:focus{
+        outline: none !important;
     }
 }
 

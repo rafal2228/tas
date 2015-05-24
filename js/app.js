@@ -2,6 +2,18 @@ $(function() {
     var wayNames = [$('#wayOnas'), $('#wayOferta'), $('#waySzkolenia'), $('#waySklep'), $('#wayKontakt')];
     var navBarHeight = $('#MenuNavBar');
     var wayPoints = [];
+    var ofertaWindow = $('.oferta-window');
+    var adjustWindowSize = function(offers) {
+        for(var i = 0; i < 3; i++)
+            $(offers[i]).css('height', 'auto')
+        var maxHeight = 0;
+        for(var i = 0; i < 3 ; i++){
+            if(parseInt($(offers[i]).css('height')) > maxHeight) maxHeight = parseInt($(offers[i]).css('height'));
+        }
+        for(var i = 0; i < 3; i++)
+            $(offers[i]).css('height', maxHeight + "px")
+        console.log(maxHeight);
+    };
 
     //Init scrolling
     $.scrollIt({
@@ -26,21 +38,20 @@ $(function() {
                     }
                 }
                 else {
-                    var i = 0;                     //  set your counter to 1
-
-                    function myLoop () {           //  create a loop function
-                        setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+                    var i = 0;
+                    function myLoop () {
+                        setTimeout(function () {
                             $(tabs[i]).removeClass('trigger');
-                            $(tabs[i]).addClass('animated');          //  your code here
-                            i++;                     //  increment the counter
-                            if (i < tabs.length) {            //  if the counter < 10, call the loop function
-                                myLoop();             //  ..  again which will trigger another
-                            }                        //  ..  setTimeout()
+                            $(tabs[i]).addClass('animated');
+                            i++;
+                            if (i < tabs.length) {
+                                myLoop();
+                            }
                         }, 250)
-                    }
-
-                    myLoop();                      //  start the loop
+                    };
+                    myLoop();
                 }
+                if(this.key === 'waypoint-1') adjustWindowSize(ofertaWindow);
             }, {
                 offset: function(){
                     var winHeight = 2* $(window).height() /3;
@@ -52,6 +63,7 @@ $(function() {
     assignWayPoints();
 
     $(window).resize(function(){
+        adjustWindowSize(ofertaWindow);
         Waypoint.refreshAll();
     });
 
@@ -109,5 +121,10 @@ $(function() {
         e.preventDefault();
         calcRoute();
         return false;
+    });
+
+    //Usability
+    $("#olxButton").on('click', function(){
+        window.open('http://tablica.pl/oferty/uzytkownik/BKRL/', '_blank');
     });
 });

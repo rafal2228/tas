@@ -18,13 +18,13 @@
     <title>TAS Piła - Wózki Widłowe</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     <!-- JS -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/scrollIt.min.js"></script>
@@ -164,7 +164,7 @@
                 <div class="szkolenia-text lato-light fadeIn trigger">
                     <div class="col-sm-6 col-md-12 szkolenia-paragraph">
                         <span>Rodzaj prowadzonych przez nas szkoleń:</span>
-                        <ul class="red">
+                        <ul class="red lato">
                             <li>Na operatora wózków widłowych</li>
                             <li>Na wymianę butli LPG w wózkach widłowych</li>
                             <li>Na operatora suwnic</li>
@@ -232,7 +232,7 @@
                 <div class="sklep-view">
                     <h1 class="lato-light">Poza sprzedażą lokalną i wysyłkową posiadamy również oferty internetowe.<br />
                         Serdecznie zapraszamy do zapoznania się z naszymi ogłoszeniami.</h1>
-                    <button type="button" class="sklep-button lato">OLX</button>
+                    <button type="button" class="sklep-button lato" id="olxButton">OLX</button>
                 </div>
             </div>
         </div>
@@ -250,6 +250,7 @@
                 <div class="kontakt-text lato-light">
                     <div class="kontakt-hours">
                         godziny otwacia:<br />
+                        Pn - Pt<br />
                         7:00 - 15:00
                     </div>
                     (67) 214 27 09<br />
