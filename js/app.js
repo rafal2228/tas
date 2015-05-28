@@ -23,7 +23,8 @@ $(function() {
         scrollTime: 600,       // how long (in ms) the animation takes
         activeClass: 'active', // class given to the active nav element
         onPageChange: null,    // function(pageIndex) that is called when page is changed
-        topOffset: -navBarHeight.outerHeight()           // offste (in px) for fixed top navigation
+        topOffset: -navBarHeight.outerHeight(),           // offste (in px) for fixed top navigation
+        topOffsetObject: navBarHeight
     });
 
     //Assigning waypoints
