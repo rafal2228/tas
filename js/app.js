@@ -3,12 +3,18 @@ $(function() {
     var navBarHeight = $('#MenuNavBar');
     var wayPoints = [];
     var ofertaWindow = $('.oferta-window');
-    if(true){
+
+    //Size adjusting
+    var calcHeight = function(){
         $.each(wayNames, function(key, value){
-            $(value).height(window.innerHeight - navBarHeight.outerHeight());
+            var obj = $(value);
+            if(obj.height() < (window.innerHeight - navBarHeight.outerHeight())){
+                obj.css('min-height', window.innerHeight - navBarHeight.outerHeight() + "px");
+            }
         });
         $('.modal-map').height(window.innerHeight/2);
-    }
+    };
+    calcHeight();
     var adjustWindowSize = function(offers) {
         for(var i = 0; i < 3; i++)
             $(offers[i]).css('height', 'auto')
@@ -18,7 +24,6 @@ $(function() {
         }
         for(var i = 0; i < 3; i++)
             $(offers[i]).css('height', maxHeight + "px")
-        console.log(maxHeight);
     };
 
     //Init scrolling
@@ -71,6 +76,7 @@ $(function() {
 
     $(window).resize(function(){
         adjustWindowSize(ofertaWindow);
+        calcHeight();
         Waypoint.refreshAll();
     });
 
@@ -133,5 +139,9 @@ $(function() {
     //Usability
     $("#olxButton").on('click', function(){
         window.open('http://tablica.pl/oferty/uzytkownik/BKRL/', '_blank');
+    });
+    var navbarCollapse = $('#myNavbar');
+    $("#myNavbar>ul>li>a").on('click', function(){
+        navbarCollapse.collapse('hide');
     });
 });
