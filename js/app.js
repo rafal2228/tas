@@ -3,6 +3,12 @@ $(function() {
     var navBarHeight = $('#MenuNavBar');
     var wayPoints = [];
     var ofertaWindow = $('.oferta-window');
+    if(true){
+        $.each(wayNames, function(key, value){
+            $(value).height(window.innerHeight - navBarHeight.outerHeight());
+        });
+        $('.modal-map').height(window.innerHeight/2);
+    }
     var adjustWindowSize = function(offers) {
         for(var i = 0; i < 3; i++)
             $(offers[i]).css('height', 'auto')
