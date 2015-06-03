@@ -8,6 +8,27 @@
 .menu-bg {
     background-color: #f9f9f9;
 }
+.menu-logo {
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+.menu-hide{
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+.container-fluid{
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
 @media (min-width: 992px) {
     .menu-button-area {
         padding-right: 100px;
@@ -85,7 +106,7 @@ ul.navbar-nav>li>a:hover {
         margin-top: 100px;
     }
     .container-fluid>.row {
-        min-height: calc(100vh - 100px);
+        min-height: calc(100vh - 50px);
     }
     .onas > div > .view {
         padding-bottom: 150px;

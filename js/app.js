@@ -8,11 +8,11 @@ $(function() {
     var calcHeight = function(){
         $.each(wayNames, function(key, value){
             var obj = $(value);
-            if(obj.height() < (window.innerHeight - navBarHeight.outerHeight())){
-                obj.css('min-height', window.innerHeight - navBarHeight.outerHeight() + "px");
+            if(obj.height() < ($(window).innerHeight() - navBarHeight.outerHeight())){
+                obj.css('min-height', $(window).innerHeight() - navBarHeight.outerHeight() + "px");
             }
         });
-        $('.modal-map').height(window.innerHeight/2);
+        $('.modal-map').height($(window).innerHeight()/2);
     };
     calcHeight();
     var adjustWindowSize = function(offers) {
@@ -34,7 +34,7 @@ $(function() {
         scrollTime: 600,       // how long (in ms) the animation takes
         activeClass: 'active', // class given to the active nav element
         onPageChange: null,    // function(pageIndex) that is called when page is changed
-        topOffset: -navBarHeight.outerHeight(),           // offste (in px) for fixed top navigation
+        topOffset: -50,           // offste (in px) for fixed top navigation
         topOffsetObject: navBarHeight
     });
 
@@ -73,12 +73,6 @@ $(function() {
         };
     };
     assignWayPoints();
-
-    $(window).resize(function(){
-        adjustWindowSize(ofertaWindow);
-        calcHeight();
-        Waypoint.refreshAll();
-    });
 
     //Google maps stuff
     var directionsDisplay;
@@ -143,5 +137,43 @@ $(function() {
     var navbarCollapse = $('#myNavbar');
     $("#myNavbar>ul>li>a").on('click', function(){
         navbarCollapse.collapse('hide');
+    });
+
+    //Menu desktop resize
+    var menuLogo = $('.menu-logo');
+    var menuHide = $('.menu-hide');
+    var containerFluid = $('.container-fluid');
+    var menuResize = function(hide){
+        if(hide){
+            menuLogo.height(18);
+            menuLogo.width(65);
+            menuHide.css('opacity', '0');
+            menuHide.css('height', '0');
+            containerFluid.css('margin-top', '50px');
+            calcHeight();
+        } else if($(window).innerWidth() > 767){
+            menuLogo.height(66);
+            menuLogo.width(159);
+            menuHide.css('opacity', '1');
+            menuHide.css('height', '50');
+            containerFluid.css('margin-top', '100px');
+            calcHeight();
+        } else {
+            menuLogo.height(20);
+            menuLogo.width(77);
+        }
+    };
+    $(window).on('scroll', function(){
+        if($(window).innerWidth() > 767){
+            console.log('fire');
+            menuResize(document.documentElement.scrollTop > 0);
+        }
+    });
+
+    $(window).resize(function(){
+        adjustWindowSize(ofertaWindow);
+        calcHeight();
+        menuResize(document.documentElement.scrollTop > 0);
+        Waypoint.refreshAll();
     });
 });
