@@ -166,14 +166,14 @@ $(function() {
     $(window).on('scroll', function(){
         if($(window).innerWidth() > 767){
             console.log('fire');
-            menuResize(document.documentElement.scrollTop > 0);
+            menuResize($(window).scrollTop() > 0);
         }
     });
 
     $(window).resize(function(){
         adjustWindowSize(ofertaWindow);
         calcHeight();
-        menuResize(document.documentElement.scrollTop > 0);
+        menuResize($(window).scrollTop() > 0);
         Waypoint.refreshAll();
     });
 });
