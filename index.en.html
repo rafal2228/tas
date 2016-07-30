@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="en">
+    <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -39,10 +40,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h6 class="modal-title">Wprowadź miejsce początkowe:</h6>
+                <h6 class="modal-title">Where from:</h6>
                 <form id="mapDirectionsForm">
-                    <input type="text" placeholder="Skąd jedziemy?" id="mapDirectionsStart">
-                    <input type="submit" class="btn btn-default" value="Pokaż">
+                    <input type="text" placeholder="Starting place" id="mapDirectionsStart">
+                    <input type="submit" class="btn btn-default" value="Show">
                 </form>
             </div>
             <div class="modal-body">
@@ -55,7 +56,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
 
@@ -77,28 +78,28 @@
                 </div>
                 <div class="col-sm-9 hidden-xs menu-hide">
                     <div class="menu-bar-contact right">
-                      <div class="lato-light">
-                        tel. (67) 214 27 09 | taspila@poczta.fm
-                        <a href="https://www.facebook.com/pages/TAS-Pi%C5%82a/562295040522939" target="_blank">
-                          <img src="img/fb_icon.png" alt="FB" />
-                        </a>
-                        <a href="/">
-                          <img src="img/pl_flag.png" alt="PL" />
-                        </a>
-                        <a href="/en">
-                          <img src="img/en_flag.png" alt="EN" />
-                        </a>
-                      </div>
+                        <div class="lato-light">
+                          tel. (67) 214 27 09 | taspila@poczta.fm
+                          <a href="https://www.facebook.com/pages/TAS-Pi%C5%82a/562295040522939" target="_blank">
+                            <img src="img/fb_icon.png" alt="FB" />
+                          </a>
+                          <a href="/">
+                            <img src="img/pl_flag.png" alt="PL" />
+                          </a>
+                          <a href="/en">
+                            <img src="img/en_flag.png" alt="EN" />
+                          </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-9 col-xs-12">
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right lato-light menu-button-area">
-                            <li><a href="#" data-scroll-nav='0'>O NAS</a></li>
-                            <li><a href="#" data-scroll-nav='1'>OFERTA</a></li>
-                            <li><a href="#" data-scroll-nav='2'>SZKOLENIA</a></li>
-                            <li><a href="#" data-scroll-nav='3'>SKLEP</a></li>
-                            <li><a href="#" data-scroll-nav='4'>KONTAKT</a></li>
+                            <li><a href="#" data-scroll-nav='0'>ABOUT US</a></li>
+                            <li><a href="#" data-scroll-nav='1'>WHAT WE DO</a></li>
+                            <li><a href="#" data-scroll-nav='2'>COURSES</a></li>
+                            <li><a href="#" data-scroll-nav='3'>SHOP</a></li>
+                            <li><a href="#" data-scroll-nav='4'>CONTACT</a></li>
                             <li class="visible-xs">
                               <div class="center">
                                 <a href="https://www.facebook.com/pages/TAS-Pi%C5%82a/562295040522939" target="_blank">
@@ -122,8 +123,8 @@
     <div id="wayOnas" data-scroll-index='0' class="row onas">
         <div class="col-md-12 col-xs-12">
                 <div class="view">
-                    <h1 class="lato-light fadeInDown trigger">Twoja firma, nasze <span class="red">wózki</span>.<br />Twoje <span class="red">wózki</span>, nasz serwis.</h1>
-                    <h2 class="lato-light fadeInUp trigger">Istniejemy na rynku od 27 lat, do każdego klienta podchodzimy<br/>indywidualnie, świadczymy usługi najwyższej jakości.</h2>
+                    <h1 class="lato-light fadeInDown trigger">Your business, our <span class="red">forklifts</span>.<br />Your <span class="red">forklifts</span>, our maintenance.</h1>
+                    <h2 class="lato-light fadeInUp trigger">Our company is on the market since 1988, we approach each client<br/>individually, providing the highest quality service.</h2>
                 </div>
         </div>
     </div>
@@ -131,46 +132,46 @@
         <div class="center">
             <div class="col-sm-12 col-xs-12">
                 <div>
-                    <h2 class="heading lato-light">Nasza oferta</h2>
+                    <h2 class="heading lato-light">What we do</h2>
                     <div class="heading-line center"></div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="oferta-window fadeInUp trigger">
-                    <div class="oferta-title lato-light">SERWIS</div>
+                    <div class="oferta-title lato-light">MAINTENANCE</div>
                     <div class="oferta-image"><img src="img/serwis_icon.png" alt="SERWIS" /></div>
                     <div class="oferta-text lato-light">
-                        Świadczymy usługi serwisowe wózków widłowych, paletowych, platformowych oraz do transportu lekkiego.
-                        Oferujemy naprawy główne i bieżące oraz przeglądy konserwacyjne. Zajmujemy się również wymianą części
-                        eksploatacyjnych i uzupełnianiem płynów roboczych.
+                        We provide service for forklifts, pallet trucks, electric platform trucks and trucks for lightweight transport.
+                        We offer major and current repairs and maintenance inspections. We also replace
+                       exploitative parts and replenish working fluids.
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="oferta-window fadeInUp trigger">
-                    <div class="oferta-title lato-light">SPRZEDAŻ</div>
-                    <div class="oferta-image"><img src="img/sprzedaz_icon.png" alt="SPRZEDAŻ" /></div>
+                    <div class="oferta-title lato-light">SALES</div>
+                    <div class="oferta-image"><img src="img/sprzedaz_icon.png" alt="SALES" /></div>
                     <div class="oferta-text lato-light">
-                        W asortymencie posiadamy:
+                        Our range of products:
                         <ul>
-                            <li>części zamienne</li>
-                            <li>wózki używane i nowe</li>
-                            <li>ogumienie</li>
-                            <li>oleje i filtry</li>
-                            <li>akumulatory i baterie trakcyjne</li>
+                            <li>spare parts</li>
+                            <li>used and new forklifts</li>
+                            <li>tires</li>
+                            <li>oils and filters</li>
+                            <li>storage and traction batteries</li>
                         </ul>
-                        Możliwość sprowadzenia części na indywidualne zamówienie klienta.
+                        We have a possibility to import parts on customer wish.
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="oferta-window fadeInUp trigger">
-                    <div class="oferta-title lato-light">DOZÓR</div>
-                    <div class="oferta-image"><img src="img/dozor_icon.png" alt="DOZÓR" /></div>
+                    <div class="oferta-title lato-light">SUPERVISION</div>
+                    <div class="oferta-image"><img src="img/dozor_icon.png" alt="SUPERVISION" /></div>
                     <div class="oferta-text lato-light">
-                        Świadczymy usługi z zakresu całorocznej konserwacji pod kątem UDT oraz wykonujemy badania
-                        odbiorcze. Przygotowujemy wózki widłowe do odbioru UDT, a także oferujemy pomoc w procedurze
-                        rejestracyjnej wózka. Nasi konserwatorzy dojeżdżają do placówek klientów w uzgodnionych terminach.
+                        We provide services in the field of full-year maintenance for UDT and execute
+                        acceptance tests. We prepare trucks for receiving UDT, as well as offer assistance in the registration procedure.
+                        Our conservators commute to facilities of customers within agreed terms.
                     </div>
                 </div>
             </div>
@@ -180,28 +181,28 @@
         <div class="center">
             <div class="col-sm-12 col-xs-12">
                 <div>
-                    <h2 class="heading-white lato-light">Szkolenia</h2>
+                    <h2 class="heading-white lato-light">Courses</h2>
                     <div class="heading-line-white center"></div>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="szkolenia-text lato-light fadeIn trigger">
                     <div class="col-sm-6 col-md-12 szkolenia-paragraph">
-                        <span>Rodzaj prowadzonych przez nas szkoleń:</span>
+                        <span>Types of courses we conduct:</span>
                         <ul class="red lato">
-                            <li>Na operatora wózków widłowych</li>
-                            <li>Na wymianę butli LPG w wózkach widłowych</li>
-                            <li>Na operatora suwnic</li>
-                            <li>Na operatora dźwigów towarowo-osobowych</li>
+                            <li>For forklift operator</li>
+                            <li>For replacement of LPG bottle in forklifts</li>
+                            <li>For gantry crane operator</li>
+                            <li>For cargo-passenger crane operator</li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-12 szkolenia-paragraph">
-                        <span>Możliwość zapisów indywidualnie lub grupowo
-                        (maksymalny rozmiar grupy ok. 30 osób)</span><br />
-                        <span>Sala szkoleniowa na terenie naszego zakładu</span><br />
-                        <span>Zapewnione materiały szkoleniowe</span><br />
-                        <span>Zaświadczenie o ukończeniu szkolenia</span><br />
-                        <span>Możliwość przystąpienia do egzaminu państwowego</span><br />
+                        <span>Possible individual or group reservation for courses
+                        (maximum group size approx. 30 people)</span><br />
+                        <span>Lecture room on our premises</span><br />
+                        <span>Course materials provided</span><br />
+                        <span>Certificate of completion of the course</span><br />
+                        <span>Possibility of taking the state exam</span><br />
                     </div>
                 </div>
             </div>
@@ -250,12 +251,12 @@
         <div class="center">
             <div class="col-sm-12 col-xs-12">
                 <div>
-                    <h2 class="heading-white lato-light">Sklep</h2>
+                    <h2 class="heading-white lato-light">Shop</h2>
                     <div class="heading-line-white center"></div>
                 </div>
                 <div class="sklep-view">
-                    <h1 class="lato-light">Poza sprzedażą lokalną i wysyłkową posiadamy również oferty internetowe.<br />
-                        Serdecznie zapraszamy do zapoznania się z naszymi ogłoszeniami.</h1>
+                    <h1 class="lato-light">Besides local and mail order sale we also have Internet offers.<br />
+                        Please feel free to look at our assortment.</h1>
                     <button type="button" class="sklep-button lato" id="olxButton">OLX</button>
                 </div>
             </div>
@@ -265,7 +266,7 @@
         <div class="center">
             <div class="col-sm-12 col-xs-12">
                 <div>
-                    <h2 class="heading lato-light">Kontakt</h2>
+                    <h2 class="heading lato-light">Contact</h2>
                     <div class="heading-line center"></div>
                 </div>
             </div>
@@ -273,9 +274,9 @@
                 <div class="kontakt-icon"><img src="img/phone_icon.png" alt="PHONE"></div>
                 <div class="kontakt-text lato-light">
                     <div class="kontakt-hours">
-                        godziny otwacia:<br />
+                        Opening hours:<br />
                         7:00 - 15:00<br />
-                        Pn - Pt
+                        Mo - Fri
                     </div>
                     (67) 214 27 09<br />
                     (67) 213 45 97<br />
@@ -296,7 +297,7 @@
                 <div class="kontakt-icon kontakt-border-horizontal"><img src="img/pin_icon.png" alt="PIN"></div>
                 <div class="kontakt-text lato-light">
                     <div class="kontakt-map"><button data-toggle="modal" data-target="#mapModal"></button></div>
-                    <span data-toggle="modal" data-target="#mapModal">Pokaż wskazówki dojazdu</span>
+                    <span data-toggle="modal" data-target="#mapModal">Show directions</span>
                 </div>
             </div>
         </div>
