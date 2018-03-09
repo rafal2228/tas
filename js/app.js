@@ -101,7 +101,7 @@ $(function() {
         var markerTas = new google.maps.Marker({
             position: tasLatlng,
             map: map,
-            title: 'G³ówna siedziba TAS'
+            title: 'Gï¿½ï¿½wna siedziba TAS'
         });
         directionsDisplay.setMap(map);
         mapInitialized = true;
@@ -132,7 +132,7 @@ $(function() {
 
     //Usability
     $("#olxButton").on('click', function(){
-        window.open('http://tablica.pl/oferty/uzytkownik/BKRL/', '_blank');
+        window.open('http://olx.pl/oferty/uzytkownik/BKRL/', '_blank');
     });
     var navbarCollapse = $('#myNavbar');
     $("#myNavbar>ul>li>a").on('click', function(){
